@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-import-assign */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
@@ -17,10 +18,10 @@ const getStorageColor = () => {
 
 const getStorageTheme = () => {
     let color = 'light-theme';
-    if (localStorage.getItem('theme')) {
-        themes = localStorage.getItem('theme');
+    if(localStorage.getItem('theme')) {
+        theme = localStorage.getItem('theme');
     }
-    return themes;
+    return theme;
 };
 
 
