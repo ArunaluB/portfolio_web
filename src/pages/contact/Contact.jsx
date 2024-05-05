@@ -1,7 +1,9 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'; // Import SweetAlert library
 
 import {
   FaEnvelopeOpen,
@@ -9,16 +11,45 @@ import {
   FaFacebookF,
   FaTwitter,
   FaYoutube,
-  FaDribbble, // Corrected the typo in the icon import
-  FaLinkedin, // Add the LinkedIn icon
-  FaGithub, // Add GitHub icon import
+  FaDribbble,
+  FaLinkedin,
+  FaGithub,
 } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
 
 import './contact.css';
 
-
 const Contact = () => {
+  const form = useRef();
+
+  
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_3gsocfs', 'template_hjdxklq', form.current, {
+        publicKey: '1uFj43s1cWDnagEN1',
+      })
+      .then(
+        () => {
+          // If email sent successfully, show SweetAlert notification
+          Swal.fire({
+            title: 'Success!',
+            text: 'Your message has been sent successfully.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+          });
+          // Reset the form after successful submission
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
+
   return (
     <section className='contact section'>
       <h2 className="section__title">
@@ -59,28 +90,29 @@ const Contact = () => {
           </div>
 
           <div className='contact__socials'>
-            <a href='https://facebook.com' className='contact__social-link'>
+            <a href='https://www.facebook.com/sasindu.nanayakkara.98?mibextid=ZbWKwL' className='contact__social-link'>
               <FaFacebookF />
             </a>
-            <a href='https://facebook.com' className='contact__social-link'>
+            <a href='https://github.com/ArunaluB' className='contact__social-link'>
               <FaGithub />
             </a>
-            <a href='https://facebook.com' className='contact__social-link'>
+            <a href='https://www.youtube.com/@nanayakkarabamunusinghe' className='contact__social-link'>
               <FaYoutube />
             </a>
-            <a href='https://facebook.com' className='contact__social-link'>
+            <a href='www.linkedin.com/in/arunalu-bamunusinghe' className='contact__social-link'>
               <FaLinkedin />
             </a>
 
           </div>
         </div>
 
-        <form className='contact__form'>
+        <form className='contact__form' ref={form} onSubmit={sendEmail}>
           <div className='form__input-group'>
             <div className="form__input-div">
               <input
                 type="text"
                 placeholder='Your Name'
+                name='to_name'
                 className="form__control" />
             </div>
 
@@ -88,6 +120,7 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder='Your Email'
+                name='from_email'
                 className="form__control" />
             </div>
 
@@ -95,6 +128,7 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder='Your Subject'
+                name="from_subject"
                 className="form__control" />
             </div>
 
@@ -102,11 +136,12 @@ const Contact = () => {
           </div>
           <div className="form__input-div">
             <textarea
+            name="message"
               placeholder='Your Message'
               className='form__control textarea'></textarea>
           </div>
 
-          <button className='button'>
+          <button className='button' value="Send">
             Send Message
             <span className='button__icon contact__button-icon'>
               <FiSend />
@@ -117,15 +152,14 @@ const Contact = () => {
       </div>
 
 
-      <footer class="copyright-section">
-        <div class="container">
+      <footer className="copyright-section">
+        <div className="container">
           <p>&copy; 2023 Arunalu.com. All Rights Reserved. | Designed by <span className='span'> Arunalu Bamunusinghe</span> </p>
         </div>
       </footer>
 
     </section>
+  );
+};
 
-  )
-}
-
-export default Contact
+export default Contact;
