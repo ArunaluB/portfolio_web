@@ -7,12 +7,14 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Portfolio from './pages/portfolio/Portfolio';
 import Contact from './pages/contact/Contact';
+import Themes from './components/theme/Themes';
 
 function App() {
   return (
     <BrowserRouter>
       <div>
         <Navbar />
+        <Themes />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
