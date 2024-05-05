@@ -10,11 +10,11 @@ import {
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
 
-import Work1 from './assets/project-2.jpg';
-import Work2 from './assets/project-2.jpg';
-import Work3 from './assets/project-2.jpg';
-import Work4 from './assets/project-2.jpg';
-import Work5 from './assets/project-2.jpg';
+import Work1 from './assets/innobot.jpg';
+import Work2 from './assets/whether.jpg';
+import Work3 from './assets/Capture.jpg';
+import Work4 from './assets/pos.jpg';
+import Work5 from './assets/mos buger.jpg';
 import Work6 from './assets/project-2.jpg';
 
 import Theme1 from './assets/purple.png';
@@ -92,7 +92,7 @@ export const personalInfo = [
   {
     id: 6,
     title: 'Address : ',
-    description: 'Jayapa,Paranathanamgoda,     Mapalagama,Galle,SriLanka',
+    description: '366/7 ,pethiyagoda road,Mulleriyawa new Town,Angoda',
   },
 
   {
@@ -124,28 +124,28 @@ export const stats = [
 
   {
     id: 1,
-    no: '12+',
+    no: '1+',
     title: 'Years of <br /> Experience',
   },
 
 
   {
     id: 2,
-    no: '2+',
+    no: '5+',
     title: 'Completed <br /> Projects',
   },
 
-  {
-    id: 3,
-    no: '81+',
-    title: 'Happy <br /> Customers',
-  },
+  // {
+  //   id: 3,
+  //   no: '81+',
+  //   title: 'Happy <br /> Customers',
+  // },
 
-  {
-    id: 4,
-    no: '53+',
-    title: ' Awards <br /> Won',
-  },
+  // {
+  //   id: 4,
+  //   no: '53+',
+  //   title: ' Awards <br /> Won',
+  // },
 
 ];
 
@@ -158,16 +158,16 @@ export const resume = [
     title: 'SLASSCOM  <span> Bootcamp </span>',
     desc: 'Future Career Bridge Bootcamp ',
   },
-  /*
+  
     {
       id: 2,
       category: 'experience',
       icon: <FaBriefcase />,
-      year: '2013 - 2018',
-      title: 'UI/UX Designer <span> Themeforest </span>',
-      desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
+      year: '2024 Feb',
+      title: 'Full Stack Developer <span> ICET </span>',
+      desc: 'ICET Industral Training Unit -RedCode Solutions',
     },
-  
+  /*
     {
       id: 3,
       category: 'experience',
@@ -190,7 +190,7 @@ export const resume = [
     id: 5,
     category: 'education',
     icon: <FaGraduationCap />,
-    year: '2024',
+    year: '2023-2024',
     title: 'iCET Certified Master <span> ICET </span>',
     desc: 'Institute of Computer Engineering Technology',
   },
@@ -240,7 +240,7 @@ export const skills = [
   {
     id: 6,
     title: 'Spring boot ',
-    percentage: '50',
+    percentage: '90',
   },
 
   {
@@ -262,7 +262,7 @@ export const skills = [
   },
   {
     id: 10,
-    title: 'Postman',
+    title: 'MongoDB',
     percentage: '60',
   },
   {
@@ -270,6 +270,17 @@ export const skills = [
     title: 'nodejs',
     percentage: '60',
   },
+  {
+    id: 12,
+    title: 'Kotlin',
+    percentage: '60',
+  },
+  {
+    id: 12,
+    title: 'Flutter',
+    percentage: '60',
+  },
+
 
 
 
@@ -280,28 +291,32 @@ export const skills = [
 export const portfolio = [
   {
     id: 1,
-    img: Work2,
-    title: 'Web system',
+    img: Work1,
+    title: 'Hospital Management System',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'Photo',
+        desc: 'University ITP project',
       },
       {
         icon: <FiUser />,
         title: 'Client : ',
-        desc: 'SLIIT',
+        desc: 'Innoboat Health',
+      },
+      
+      {
+        title: 'Preview : ',
+        desc: 'https://github.com/InnobotHealth/InnobotHealthFE.git'
       },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'JS,HTML,css',
+        desc: 'ReactJs,SpringBoot,MongoDB',
       },
       {
-        icon: <FiExternalLink />,
         title: 'Preview : ',
-        desc: 'github',
+        desc: 'https://github.com/DulangaMW/Innobothealth-Access-Management-System.git'
       },
     ],
   },
@@ -309,7 +324,7 @@ export const portfolio = [
   {
     id: 2,
     img: Work2,
-    title: 'Website Design',
+    title: 'Weather Application',
     details: [
       {
         icon: <FiFileText />,
@@ -318,86 +333,83 @@ export const portfolio = [
       },
       {
         icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'ICET',
+        title: 'Acadamic: ',
+        desc: 'personal',
       },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'React JS',
+        desc: 'Vanila Js openwhetherApi',
       },
       {
-        icon: <FiExternalLink />,
         title: 'Preview : ',
-        desc: 'www.ICET.com',
+        desc: 'https://arunalub.github.io/Weather_application/',
       },
     ],
   },
 
   {
     id: 3,
-    img: Work1,
-    title: 'Video Editing',
+    img: Work3,
+    title: 'Mobile Game Development',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'Video',
+        desc: 'CarOut Game',
       },
       {
         icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'ICET',
+        title: 'Acadamic : ',
+        desc: 'SLIIT University',
       },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'nodejs',
+        desc: 'Kotlin',
       },
       {
-        icon: <FiExternalLink />,
         title: 'Preview : ',
-        desc: 'www.ICET.com',
+        desc: 'https://github.com/ArunaluB/Kotlin_Mobile_LabExam03.git',
       },
     ],
   },
 
   {
     id: 4,
-    img: Work2,
-    title: 'Video Editing',
+    img: Work4,
+    title: 'Standalone Application',
     details: [
       {
         icon: <FiFileText />,
         title: 'Project : ',
-        desc: 'Video',
+        desc: 'Pos System',
       },
       {
         icon: <FiUser />,
-        title: 'Client : ',
+        title: 'Acadamic : ',
         desc: 'ICET',
       },
       {
         icon: <FaCode />,
         title: 'Language : ',
-        desc: 'reactjs',
+        desc: 'JavaFx',
       },
       {
-        icon: <FiExternalLink />,
         title: 'Preview : ',
-        desc: 'www.dribble.com',
+        desc: 'https://github.com/ArunaluB/PosSystem-Application.git',
       },
     ],
   },
 
   {
     id: 5,
-    img: Work2,
-    title: 'Web Page',
+    img: Work5,
+    title: 'Web Application',
     details: [
       {
         title: 'Project : ',
-        desc: 'Website',
+        desc: 'Buger shop',
       },
       {
         title: 'Client : ',
@@ -405,42 +417,42 @@ export const portfolio = [
       },
       {
         title: 'Language : ',
-        desc: 'React JS, Node JS',
+        desc: 'Html/Css, Javascript',
       },
       {
         title: 'Preview : ',
-        desc: 'www.ICET.com',
+        desc: 'https://arunalub.github.io/Webapplication/',
       },
     ],
   },
 
-  {
-    id: 6,
-    img: Work2,
-    title: 'Photo Editing',
-    details: [
-      {
-        icon: <FiFileText />,
-        title: 'Project : ',
-        desc: 'Photo',
-      },
-      {
-        icon: <FiUser />,
-        title: 'Client : ',
-        desc: 'ICET',
-      },
-      {
-        icon: <FaCode />,
-        title: 'Language : ',
-        desc: 'Html',
-      },
-      {
-        icon: <FiExternalLink />,
-        title: 'Preview : ',
-        desc: 'www.ICET.com',
-      },
-    ],
-  },
+  // {
+  //   id: 6,
+  //   img: Work2,
+  //   title: 'Web Application',
+  //   details: [
+  //     {
+  //       icon: <FiFileText />,
+  //       title: 'Project : ',
+  //       desc: 'Buger shop',
+  //     },
+  //     {
+  //       icon: <FiUser />,
+  //       title: 'Client : ',
+  //       desc: 'ICET',
+  //     },
+  //     {
+  //       icon: <FaCode />,
+  //       title: 'Language : ',
+  //       desc: 'Html/Css, Javascript',
+  //     },
+  //     {
+  //       icon: <FiExternalLink />,
+  //       title: 'Preview : ',
+  //       desc: 'www.ICET.com',
+  //     },
+  //   ],
+  // },
 ];
 
 export const themes = [

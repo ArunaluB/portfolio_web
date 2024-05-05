@@ -1,16 +1,20 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Close from "../../assets/close.svg";
-
+import { FiExternalLink } from 'react-icons/fi';
 
 const PortfolioItem = ({ img, title, details }) => {
     const [model, setModal] = useState(false);
 
     const toggleModel = () => {
         setModal(!model);
-
     }
+
+    const openGitHubRepo = (url) => {
+        window.open(url, '_blank');
+    };
+
     return (
         <div className="portfolio__item">
             <img src={img} alt='' className="portfolio__img" />
@@ -27,18 +31,23 @@ const PortfolioItem = ({ img, title, details }) => {
                         <h3 className="model__title"> {title} </h3>
 
                         <ul className="model__list grid">
-                            {details.map(({ icon, title, desc }, index) => {
+                            {details.map(({ icon, title, desc, github }, index) => {
                                 return (
                                     <li className="model__item" key={index}>
                                         <span className="item__icon"> {icon} </span>
 
                                         <div>
                                             <span className="item__title"> {title} </span>
-                                            <span className="item__details"> {desc}  </span>
+                                            {title === 'Preview : ' ? (
+                                                <span className="item__details" onClick={() => openGitHubRepo(desc)}>
+                                                    {desc} <FiExternalLink />
+                                                </span>
+                                            ) : (
+                                                <span className="item__details"> {desc} </span>
+                                            )}
                                         </div>
                                     </li>
                                 )
-
                             })}
                         </ul>
 
@@ -50,4 +59,4 @@ const PortfolioItem = ({ img, title, details }) => {
     )
 }
 
-export default PortfolioItem
+export default PortfolioItem;
