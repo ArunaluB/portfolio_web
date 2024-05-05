@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import {
   FaHome,
@@ -11,8 +10,12 @@ import {
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
 
+import Work1 from './assets/project-2.jpg';
 import Work2 from './assets/project-2.jpg';
-
+import Work3 from './assets/project-2.jpg';
+import Work4 from './assets/project-2.jpg';
+import Work5 from './assets/project-2.jpg';
+import Work6 from './assets/project-2.jpg';
 
 import Theme1 from './assets/purple.png';
 import Theme2 from './assets/red.png';
@@ -118,13 +121,13 @@ export const personalInfo = [
 ];
 
 export const stats = [
-  
+
   {
     id: 1,
     no: '12+',
     title: 'Years of <br /> Experience',
   },
-  
+
 
   {
     id: 2,
@@ -143,7 +146,7 @@ export const stats = [
     no: '53+',
     title: ' Awards <br /> Won',
   },
-  
+
 ];
 
 export const resume = [
@@ -155,25 +158,25 @@ export const resume = [
     title: 'SLASSCOM  <span> Bootcamp </span>',
     desc: 'Future Career Bridge Bootcamp ',
   },
-/*
-  {
-    id: 2,
-    category: 'experience',
-    icon: <FaBriefcase />,
-    year: '2013 - 2018',
-    title: 'UI/UX Designer <span> Themeforest </span>',
-    desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
-  },
-
-  {
-    id: 3,
-    category: 'experience',
-    icon: <FaBriefcase />,
-    year: '2005 - 2013',
-    title: 'Consultant <span> Videohive </span>',
-    desc: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
-  },
-*/
+  /*
+    {
+      id: 2,
+      category: 'experience',
+      icon: <FaBriefcase />,
+      year: '2013 - 2018',
+      title: 'UI/UX Designer <span> Themeforest </span>',
+      desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
+    },
+  
+    {
+      id: 3,
+      category: 'experience',
+      icon: <FaBriefcase />,
+      year: '2005 - 2013',
+      title: 'Consultant <span> Videohive </span>',
+      desc: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
+    },
+  */
   {
     id: 4,
     category: 'education',
@@ -191,16 +194,16 @@ export const resume = [
     title: 'iCET Certified Master <span> ICET </span>',
     desc: 'Institute of Computer Engineering Technology',
   },
-/*
-  {
-    id: 6,
-    category: 'education',
-    icon: <FaGraduationCap />,
-    year: '2009',
-    title: 'Bachelor Degree <span> Tunis High School </span>',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore',
-  },
-  */
+  /*
+    {
+      id: 6,
+      category: 'education',
+      icon: <FaGraduationCap />,
+      year: '2009',
+      title: 'Bachelor Degree <span> Tunis High School </span>',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore',
+    },
+    */
 ];
 
 export const skills = [
@@ -268,8 +271,8 @@ export const skills = [
     percentage: '60',
   },
 
-  
-  
+
+
 
 
 ];
