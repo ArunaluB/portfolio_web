@@ -1,16 +1,18 @@
-FROM node:20-alpine
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-COPY package*.json .
-
+COPY package*.json ./
 RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+RUN npm run build
 
-CMD ["npm", "run", "dev"]
+FROM docker.io/nginxinc/nginx-unprivileged:stable-alpine-slim
 
 COPY --from=builder /app/build /usr/share/nginx/html/
 
+EXPOSE 5173
+
+CMD ["nginx", "-g", "daemon off;"]
