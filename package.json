@@ -1,14 +1,16 @@
 {
-  "name": "vite-project",
-  "homepage":  "https://github.com/ArunaluB/portfolio_web/",
+  "name": "portfolioweb-new-version",
+  "homepage": "https://ArunaluB.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "deploy": "vite build && gh-pages -d dist",
-    "dev": "vite",
+    "dev": "vite ",
     "build": "vite build",
-    "preview": "vite preview"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://github.com/ArunaluB/portfolio_web.git "
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
